@@ -3,9 +3,10 @@ const { src, dest, watch} = require("gulp");
 const sass = require("gulp-sass")(require('sass'));
 
 // compiling sass
-function css(done){
+function css( done ){
 
-    src("src/scss/**/*.scss")
+    src('src/scss/**/*.scss')
+    .pipe(plumber())
     .pipe(sass())
     .pipe(dest("build/css"));
 
@@ -13,11 +14,11 @@ function css(done){
 }
 
 // watch 
-function dev(done){
-    watch("src/scss/**/*.scss",css)
+function dev( done ){
+    watch('src/scss/**/*.scss', css);
 
     done();
 }
 
 exports.css = css;
-exports.dev=dev;
+exports.dev = dev;
