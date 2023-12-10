@@ -1,4 +1,5 @@
 @use'./src/scss/base/variables' as v;
+@use'base/mixins' as m;
 
 .header{
 
@@ -14,4 +15,8 @@
 .navegacion-principal a{
     color: v.$blanco;
     font-size: 2.4rem;
+
+    &:hover{
+        color: v.$amarillo;
+    }
 }
