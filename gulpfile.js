@@ -1,6 +1,8 @@
 
 const { src, dest, watch} = require("gulp");
 const sass = require("gulp-sass")(require('sass'));
+const plumber=require('gulp-plumber');
+
 
 // compiling sass
 function css( done ){
