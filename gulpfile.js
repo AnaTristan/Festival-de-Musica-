@@ -6,8 +6,8 @@ const sass = require("gulp-sass")(require('sass'));
 const plumber = require('gulp-plumber');
 
 //Imagenes
-const imagemin = require('gulp-imagemin');
-const cache = require('gulp-cache');
+//const imagemin = require('gulp-imagemin');
+//const cache = require('gulp-cache');
 //const webp = require('gulp-webp');
 
 //function verWebp(done) {
