@@ -33,6 +33,12 @@ function imagenes(done) {
     done();
 }
 
+function javascript(done) {
+    src('src/js/**/*.js')
+        .pipe(dest("build/js"))
+    done();
+}
+
 
 // compiling sass
 function css(done) {
@@ -48,11 +54,12 @@ function css(done) {
 // watch 
 function dev(done) {
     watch('src/scss/**/*.scss', css);
-
+    watch('src/js/**/*.js', javascript)
     done();
 }
 
 exports.css = css;
+exports.js = javascript;
 exports.dev = dev;
 exports.imagenes = imagenes;
 //exports.verWebp = verWebp;
